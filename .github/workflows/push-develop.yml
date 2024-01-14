@@ -3,7 +3,8 @@ name: Create pre-release version
 on:
   push:
     branches: [ develop ]
-  
+    paths:
+      - resource-display/**
 jobs:
   pre_release:
     # The type of runner that the job will run on
