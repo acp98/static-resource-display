@@ -33,7 +33,14 @@ jobs:
       run: |
         test $(sfdx force:package:version:report -p "$version_id" --json | jq .result.HasPassedCodeCoverageCheck) = 'true'
     
-    - name: Install new version in Dev Hub
+    - name: Populate Auth File
+      shell: bash
+      run: 'echo ${{secrets.DEVORG_SFDX_URL}} > ./DEVORG_SFDX_URL.txt'
+    
+    - name: Authenticate Dev Org
+      run: 'sfdx force:auth:sfdxurl:store -f ./DEVORG_SFDX_URL.txt -a devhub -d'
+
+    - name: Install new version in Dev Org
       run: |
         sfdx force:package:install -p "$version_id" -u devhub --wait 10 --publishwait 10
     
