@@ -2,8 +2,12 @@
 
 ![Static Resource Display]
 
-<a href="https://githubsfdeploy.herokuapp.com">
-  <img alt="Deploy to Salesforce"
+<a href="https://login.salesforce.com/packaging/installPackage.apexp?p0=04tHr000001iRiKIAU">
+  <img alt="Deploy to Salesforce (Production)"
+       src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
+</a>
+<a href="https://TEST.salesforce.com/packaging/installPackage.apexp?p0=04tHr000001iRiKIAU">
+  <img alt="Deploy to Salesforce (Sandbox)"
        src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
 </a>
 
