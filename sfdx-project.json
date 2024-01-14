@@ -4,8 +4,8 @@
       "path": "resource-display",
       "default": true,
       "package": "StaticResourceDisplay",
-      "versionName": "Version 0.1",
-      "versionNumber": "0.1.0.NEXT",
+      "versionName": "Version 1.0",
+      "versionNumber": "1.0.0.NEXT",
       "versionDescription": "A Static Resource display component"
     }
   ],
