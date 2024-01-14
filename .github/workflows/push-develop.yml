@@ -11,14 +11,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-
-    - uses: actions/setup-node@v1
-      with:
-        node-version: '10.x'
         
     - name: Install Salesforce CLI
       run: |
-        npm install sfdx-cli
+        npm install sfdx-cli -g
         node_modules/sfdx-cli/bin/run --version
         node_modules/sfdx-cli/bin/run plugins --core
     
