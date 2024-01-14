@@ -43,6 +43,7 @@ jobs:
       run: 'sfdx force:auth:sfdxurl:store -f ./DEVORG_SFDX_URL.txt -a devhub -d'
 
     - name: Install new version in Dev Org
+
       run: |
         sfdx force:package:install -p "$version_id" -u devhub --wait 10 --publishwait 10
     
