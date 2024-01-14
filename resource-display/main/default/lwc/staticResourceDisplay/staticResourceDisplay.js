@@ -15,6 +15,7 @@ export default class StaticResourceDisplay extends LightningElement {
     @api keyValue9;
     @api keyValue10;
 
+    
     account;
     images = [];
     isDataLoaded = false;
