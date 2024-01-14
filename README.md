@@ -32,12 +32,9 @@ For Sandbox:
 </a>
 
 ### CLI (recommended)
+You can install this as an Unlocked Package, using the CLI, by running the following command:
 
-    You can install this as an Unlocked Package, using the CLI, by running the following command:
-
-    ```
     sfdx force:package:install --package "04tHr000001iRiKIAU" --targetusername YOUR_ORG_ALIAS --wait 10 --publishwait 10
-    ```
 
 ### Manual <a id="installation-clone-repo"></a>
 You can install this by cloning the repository and deploying the content of _resource-display_ folder. Before that you should remove the _namespace_ property in the _sfdx-project.json_ file.
