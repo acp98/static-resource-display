@@ -14,7 +14,7 @@ jobs:
     - name: Install Salesforce CLI
       run: |
         npm install sfdx-cli -g
-        
+     
     - name: Install jq
       run: |
         sudo apt-get install jq
