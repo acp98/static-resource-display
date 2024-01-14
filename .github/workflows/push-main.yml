@@ -3,7 +3,8 @@ name: Publish new release
 on:
   push:
     branches: [ main ]
-
+    paths:
+      - resource-display/**
 jobs:
   publish_release:
     # The type of runner that the job will run on
