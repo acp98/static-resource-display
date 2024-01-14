@@ -3,6 +3,8 @@ name: Create pre-release version
 on:
   push:
     branches: [ develop ]
+    paths:
+      - resource-display
 
 jobs:
   pre_release:
@@ -11,13 +13,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-
+        
     - name: Install Salesforce CLI
       run: |
-        wget https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
-        mkdir sfdx-cli
-        tar xJf sfdx-linux-amd64.tar.xz -C sfdx-cli --strip-components 1
-        ./sfdx-cli/install
+        npm install sfdx-cli -g
     
     - name: Populate auth file
       shell: bash
@@ -28,7 +27,7 @@ jobs:
 
     - name: Create new version
       run: |
-        sfdx force:package:version:create -x -p "Static Resource Display" -w 60 --codecoverage
+        sfdx force:package:version:create -x -p "StaticResourceDisplay" -w 60 --codecoverage
         new_version_id=$(grep -o "04t[[:alnum:]]\{15\}" sfdx-project.json | tail -n1)
         echo "version_id=${new_version_id}" >> $GITHUB_ENV
     
@@ -36,7 +35,15 @@ jobs:
       run: |
         test $(sfdx force:package:version:report -p "$version_id" --json | jq .result.HasPassedCodeCoverageCheck) = 'true'
     
-    - name: Install new version in Dev Hub
+    - name: Populate Auth File
+      shell: bash
+      run: 'echo ${{secrets.DEVORG_SFDX_URL}} > ./DEVORG_SFDX_URL.txt'
+    
+    - name: Authenticate Dev Org
+      run: 'sfdx force:auth:sfdxurl:store -f ./DEVORG_SFDX_URL.txt -a devhub -d'
+
+    - name: Install new version in Dev Org
+
       run: |
         sfdx force:package:install -p "$version_id" -u devhub --wait 10 --publishwait 10
     
