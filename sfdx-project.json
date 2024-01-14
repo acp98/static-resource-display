@@ -4,8 +4,8 @@
       "path": "resource-display",
       "default": true,
       "package": "StaticResourceDisplay",
-      "versionName": "Version 0.1",
-      "versionNumber": "0.1.0.NEXT",
+      "versionName": "Version 1.0",
+      "versionNumber": "1.0.0.NEXT",
       "versionDescription": "A Static Resource display component"
     }
   ],
@@ -17,6 +17,7 @@
     "StaticResourceDisplay@0.1.0-1": "04tHr000001iRhvIAE",
     "StaticResourceDisplay@0.1.0-2": "04tHr000001iRi0IAE",
     "StaticResourceDisplay@0.1.0-3": "04tHr000001iRi5IAE",
-    "StaticResourceDisplay@0.1.0-5": "04tHr000001iRiFIAU"
+    "StaticResourceDisplay@0.1.0-5": "04tHr000001iRiFIAU",
+    "StaticResourceDisplay@1.0.0-1": "04tHr000001iRiKIAU"
   }
 }
