@@ -12,21 +12,15 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - uses: actions/setup-node@v1
-      with:
-        node-version: '10.x'
-        
     - name: Install Salesforce CLI
       run: |
-        npm install sfdx-cli
-        node_modules/sfdx-cli/bin/run --version
-        node_modules/sfdx-cli/bin/run plugins --core
+        npm install sfdx-cli -g
       
     - name: Install jq
       run: |
         sudo apt-get install jq
     
-    - name: Populate auth file
+    - name: Populate Auth File
       shell: bash
       run: 'echo ${{secrets.DEVHUB_SFDX_URL}} > ./DEVHUB_SFDX_URL.txt'
     
@@ -38,7 +32,7 @@ jobs:
         version_id=$(grep -o "04t[[:alnum:]]\{15\}" sfdx-project.json | tail -n1)
         sfdx force:package:version:promote -p "$version_id" --noprompt
     
-    - name: Tag new release
+    - name: Tag New Release
       run: |
         tag_name=$(jq ".packageDirectories[0].versionName" sfdx-project.json | tr -d '"'| tr -d ' ')
         pkg_name=$(jq ".packageDirectories[0].package" sfdx-project.json | tr -d '"')
