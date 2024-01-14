@@ -1,0 +1,21 @@
+{
+  "packageDirectories": [
+    {
+      "path": "resource-display",
+      "default": true,
+      "package": "StaticResourceDisplay",
+      "versionName": "Version 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "versionDescription": "A Static Resource display component"
+    }
+  ],
+  "namespace": "ttab",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "58.0",
+  "packageAliases": {
+    "StaticResourceDisplay": "0HoHr0000008OWjKAM",
+    "StaticResourceDisplay@0.1.0-1": "04tHr000001iRhvIAE",
+    "StaticResourceDisplay@0.1.0-2": "04tHr000001iRi0IAE",
+    "StaticResourceDisplay@0.1.0-3": "04tHr000001iRi5IAE"
+  }
+}

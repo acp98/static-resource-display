@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata" fqn="accountLogoDisplay">
+    <apiVersion>58.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Static Resource Display</masterLabel>
+    <targets>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage">
+            <property name="fieldName" type="String" label="API Field Name" description="Field API Name (Ex: Account.Customer_Type__c)" />
+            <property name="keyValue1" type="String" label="Key Value Pair 1" description="Use : to separate the key and the name of the static resource. Ex: Website:websitelogo" />
+            <property name="keyValue2" type="String" label="Key Value Pair 2" description="Use : to separate the key and the name of the static resource. Ex: Website:websitelogo" />
+            <property name="keyValue3" type="String" label="Key Value Pair 3" description="Use : to separate the key and the name of the static resource. Ex: Website:websitelogo" />
+            <property name="keyValue4" type="String" label="Key Value Pair 4" description="Use : to separate the key and the name of the static resource. Ex: Website:websitelogo" />
+            <property name="keyValue5" type="String" label="Key Value Pair 5" description="Use : to separate the key and the name of the static resource. Ex: Website:websitelogo" />
+            <property name="keyValue6" type="String" label="Key Value Pair 6" description="Use : to separate the key and the name of the static resource. Ex: Website:websitelogo" />
+            <property name="keyValue7" type="String" label="Key Value Pair 7" description="Use : to separate the key and the name of the static resource. Ex: Website:websitelogo" />
+            <property name="keyValue8" type="String" label="Key Value Pair 8" description="Use : to separate the key and the name of the static resource. Ex: Website:websitelogo" />
+            <property name="keyValue9" type="String" label="Key Value Pair 9" description="Use : to separate the key and the name of the static resource. Ex: Website:websitelogo" />
+            <property name="keyValue10" type="String" label="Key Value Pair 10" description="Use : to separate the key and the name of the static resource. Ex: Website:websitelogo" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
